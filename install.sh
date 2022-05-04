@@ -119,7 +119,7 @@ printf "\033[32m
 Your Agent is running and functioning properly. It will continue to run in the
 background and submit metrics to vMonitor.
 If you ever want to stop the Agent, run:
-    sudo service stop vmonitor-uptime-agent
+    sudo service vmonitor-uptime-agent stop
 And to run it again run:
-    sudo service start vmonitor-uptime-agent
+    sudo service vmonitor-uptime-agent start
 \033[0m"
