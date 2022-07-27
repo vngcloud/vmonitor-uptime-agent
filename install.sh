@@ -100,6 +100,13 @@ agent:
 
 location:
   id: $LOCATION_ID
+  
+http:
+  headerNameMaxLength: 1500
+  headerValueMaxLength: 2000
+  paramNameMaxLength: 1500
+  paramValueMaxLength: 1500
+  bodyMaxLength: 10000
 EOF
 # restart agent
 printf "\033[34m* Starting the Agent...\n\033[0m\n"
