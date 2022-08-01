@@ -107,6 +107,18 @@ http:
   paramNameMaxLength: 1500
   paramValueMaxLength: 1500
   bodyMaxLength: 10000
+  
+ipTable:
+  block:
+    enabled: false
+    ip:
+      - 127.0.0.1
+      - 192.168.0.1
+  allow:
+    enabled: false
+    ip:
+      - 127.0.0.1
+      - 192.168.0.1
 EOF
 # restart agent
 printf "\033[34m* Starting the Agent...\n\033[0m\n"
