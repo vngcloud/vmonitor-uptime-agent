@@ -13,8 +13,8 @@ fi
 
 if [ ! $VMONITOR_SITE ]; then
   printf "\033[31mSITE not available in VMONITOR_SITE environment variable.\033[0m\n"
-  printf "\033[31mDefault site is uptime-agent.vngcloud.vn\033[0m\n"
-  VMONITOR_SITE=uptime-agent.vngcloud.vn
+  printf "\033[31mDefault site is monitoring-agent.vngcloud.vn\033[0m\n"
+  VMONITOR_SITE=monitoring-agent.vngcloud.vn
 fi
 
 KNOWN_DISTRIBUTION="(Debian|Ubuntu|RedHat|CentOS|openSUSE|Amazon|Arista|SUSE)"
@@ -111,14 +111,20 @@ http:
 ipTable:
   block:
     enabled: false
-    ip:
+    cidr:
       - 127.0.0.1
-      - 192.168.0.1
+      - 10.0.0.0/8
+      - 172.16.0.0/12
+      - 192.168.0.0/16
+      - 224.0.0.0/4
   allow:
     enabled: false
-    ip:
+    cidr:
       - 127.0.0.1
-      - 192.168.0.1
+      - 10.0.0.0/8
+      - 172.16.0.0/12
+      - 192.168.0.0/16
+      - 224.0.0.0/4
 EOF
 # restart agent
 printf "\033[34m* Starting the Agent...\n\033[0m\n"
