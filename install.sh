@@ -64,7 +64,7 @@ if [ $OS = "RedHat" ]; then
     echo $URI
     curl -L $URI -o /tmp/$PACKAGE_NAME
 
-    $sudo_cmd rpm -i /tmp/$PACKAGE_NAME
+    $sudo_cmd rpm -i /tmp/$PACKAGE_NAME --force
 
 elif [ $OS = "Debian" ]; then
     printf "\033[34m\n* Installing the vMonitor Uptime Agent package\n\033[0m\n"
